@@ -1,16 +1,15 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ddd;
+  background-color: #f7f9fc;
   color: #333;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid red;
+  padding: 0 20px;
 }
 
 header {
@@ -18,26 +17,40 @@ header {
   margin-bottom: 20px;
 }
 
+h1 {
+  font-size: 2em;
+  color: #333;
+}
+
 #profile {
   text-align: center;
+  padding: 20px 0;
   margin-bottom: 20px;
-  /* background-image: url("/profile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
+  background: linear-gradient(
+    351deg,
+    rgba(17, 65, 130, 1) 13%,
+    rgba(15, 78, 141, 1) 25%,
+    rgba(0, 212, 255, 1) 58%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  border-radius: 10px;
 }
 
 #profile img {
   border: 3px solid red;
+  border-radius: 50%;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
 #profile img:hover {
-  border: 3px solid orange;
-  transform: scale(1.2);
+  border-color: orange;
+  transform: scale(1.1);
 }
 
 #profile p {
-    margin-top: 20px;
+  margin-top: 10px;
+  color: #f7f9fc;
+  font-size: 1.2em;
 }
 
 #profile p:hover {
@@ -47,39 +60,55 @@ header {
 #goals,
 #current-time,
 #links {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-#goal-card {
+h2 {
+  font-size: 1.5em;
+  color: #555;
+  margin: 10px 0;
+}
+
+#goal-cards {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.goal {
-  margin: 10px;
-  padding: 10px;
+.goal-card-item {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 0;
+  padding: 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, border-color 0.3s;
 }
 
-.goal:hover {
-  border: 1px solid orange;
-  transform: scale(1.1);
+.goal-card-item:hover {
+  border-color: orange;
+  transform: scale(1.05);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#current-time p {
+  font-size: 1.2em;
 }
 
 #links a {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #0066cc;
   text-decoration: none;
+  font-size: 1.2em;
 }
 
 #links a:hover {
   text-decoration: underline;
-}
-
-@media screen and (max-width: 426px) {
-  #goal-card {
-    flex-wrap: wrap;
-  }
 }
